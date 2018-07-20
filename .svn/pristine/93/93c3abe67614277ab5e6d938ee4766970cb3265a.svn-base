@@ -1,0 +1,340 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	-webkit-user-select：none;
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+	font-family: pf;
+}
+@font-face {
+	font-family:pf;
+	src: url('../font/PingFangSCMedium.ttf');
+	font-weight: bolder;
+}
+html,body{
+	font-size: 100px;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+}
+a{
+	text-decoration: none;
+}
+img{
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.wrap{
+	overflow: hidden;
+	position: relative;
+	min-width: 3.2rem;
+	max-width: 7.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	height: 100%;
+}
+.dabox{
+	background: url(../img/dabg.png);
+	background-repeat-y: repeat;
+	background-size: 100% auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+/*规则*/
+.wrap .guize{
+	display: block;
+	width: 100%;
+}
+.wrap .guizebtn{
+    position: absolute;
+    top: 12.7rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    width: 3.5rem;
+}
+/*32支球队*/
+.wrap .box{
+	display: block;
+	width: 100%;
+}
+/*搜索*/
+.wrap .box .search{
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+.wrap .box .search .xian{
+	float: left;
+	width: 0.03rem;
+	margin-left: 0.3rem;
+	position: relative;
+	top: 0.08rem;
+}
+.wrap .box .search .sousuobg{
+	display: block;
+	width: 100%;
+}
+.wrap .box .search .searchbtn{
+	overflow: hidden;
+	position: absolute;
+    height: 0.7rem;
+    top: 2.32rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 6.2rem;
+    border-radius: 0.4rem;
+    border: 0.03rem solid #58337d;
+}
+.wrap .box .search #searchbtn{
+	display: block;
+	float: right;
+	margin-left: 0.1rem;
+    height: 0.7rem;
+    width: 0.7rem;
+    position: relative;
+    top: -0.04rem;
+    background-image: url(../img/sousuobtn.png);
+    background-repeat: no-repeat;
+    background-size: 0.4rem;
+    background-position: center
+}
+.wrap .box .search #searchbtn img{
+	margin: 0.09rem;
+	display: block;
+    width: 0.4rem;
+}
+.wrap .box .search #search{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	font-size: 0.34rem;
+	outline: none;
+	float: left;
+	display:block;
+	text-align: center;
+	height: 0.6rem;
+	width: 4.8rem;
+	color: #58337d;
+}
+/*球队*/
+.wrap .box .qiudui{
+	position: relative;
+	background: url(../img/grass.png);
+	background-repeat-y: repeat;
+	background-size: 100% auto;
+}
+.wrap .box .box-team{
+	position: relative;
+	margin-bottom: 0.6rem;
+}
+.wrap .box .team .title{
+	display: block;
+	width: 5rem;
+	margin: 0 auto;
+	margin-bottom: 0.2rem;
+}
+.wrap .box .team .title img{
+	width: 1.1rem;
+	display: inline-block;
+	margin-left: 0.2rem;
+}
+.wrap .box .team .content{
+	padding-top: 0.3rem;
+	margin:0 0.24rem;
+	box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	height: 5rem;
+	background: white;
+}
+.wrap .box .team .content .video{
+	border: 1px solid #222222;
+	display: block;
+	box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	margin:0 0.45rem 0rem;
+	height: 3.44rem;
+	background: gray;
+}
+
+.wrap .box .team .select{
+	font-size: 0.3rem;
+	color: #ffca24;
+	margin: 0.2rem 0.45rem ;
+	margin-top: 0.4rem;
+	position: relative;
+}
+/*投票按钮*/
+.wrap .box .team .select .selectbtn{
+	position: relative;
+	top: -0.06rem;
+	margin-right: 0.2rem;
+	display: block;
+	float: left;
+	width: 0.5rem;
+}
+.wrap .box .team .select .xiaoguo{
+	display: inline-block;
+	z-index: 10;
+	position: absolute;
+	top: 0.2rem;
+	left: 0.8rem;
+	font-size: 0.6rem;
+	color: #dd5757;
+	width: 0.8rem;
+	height: 0.6rem;
+	background: url(../img/xiaoguoimg.png) no-repeat;
+	background-size: cover;
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	visibility: hidden;
+}
+.wrap .box .team .select p{
+	text-shadow:0 0 0.06rem rgba(0,0,0,0.4);
+	float: right;
+	font-size: 0.3rem;
+	color: #666666;
+}
+.wrap .box .team .select .clear{
+	clear: both;
+}
+.wrap .box .team .select p span{
+	color: #222222;
+}
+/*规则弹窗*/
+.wrap .guialert{
+	box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	display: none;
+	height: 10.06rem;
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	margin: auto 0.24rem;
+}
+.wrap .guialert .guiimg{
+	display: block;
+	width: 100%;
+}
+.wrap .guialert .guiclose{
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	display: block;
+	width: 0.5rem;
+}
+/*填号码*/
+.wrap .box-tel{
+	z-index: 60;
+	display: none;
+	box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 0.2rem rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto 0.24rem;
+	height:4.4rem;
+	background-color: white;
+	
+}
+.wrap .box-tel .telclose{
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	width: 0.5rem;
+}
+.wrap .box-tel .biaoti{
+	padding-top: 0.8rem;
+	text-align: center;
+	font-size: 0.46rem;
+	color: #dc5757;
+}
+.wrap .box-tel #tel{
+	padding-left: 0.3rem;
+	display: block;
+	border: 1px solid #ffca24;
+	border-radius: 0.1rem;
+	width: 5rem;
+	height: 0.8rem;
+	margin: 0.5rem auto;
+	font-size: 0.46rem;
+	color: #dc5858;
+}
+.wrap .box-tel .telbtn{
+	display: block;
+	width: 2.2rem;
+	margin: 0 auto;
+}
+/*提示弹窗*/
+.wrap  .tanchuang{
+	display: none;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	margin: auto;
+	width: 100%;
+	height: 1.1rem;
+	background: #FFFFFF;
+	font-size: 0.46rem;
+	color: white;
+	z-index: 60;
+}
+.wrap  .tanchuang img{
+	width: 0.46rem;
+	display: inline-block;
+	margin-right: 0.1rem;
+}
+.wrap  .tanchuang span{
+	color: #dc5757;
+	display: inline-block;
+	margin-top: 0.24rem;
+	letter-spacing: 0.03rem;
+}
+/*底部*/
+.footer{
+	position: relative;
+	width: 100%;
+}
+.footer .bg{
+	width: 100%;
+	display: block;
+}
+.footer .fanhui{
+	cursor: pointer;
+	position: absolute;
+	top: 0.8rem;
+	left: 0;
+	right: 0;
+	width: 2rem;
+	display: block;
+	margin: 0 auto;
+}
+.footer p{
+	position: absolute;
+	bottom: 0.2rem;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	display: block;
+	font-size: 0.26rem;
+	color: #222222;
+}
